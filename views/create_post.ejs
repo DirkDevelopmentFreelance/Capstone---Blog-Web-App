@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+<div class="blog-post-frm">
+<form action="/submit" method="post">
+    <div class="frm-header">
+        <h1 class="frm-title">Create A Blog</h1>
+    </div>
+    <div class="frm-input">
+        <div class="blog-title-in">
+            <label for="title">
+                Blog Title:
+                
+            </label>
+            <input type="text" name="title" id="post-title">
+        </div>
+        <div class="blog-text-in">
+            <label for="blog_text">
+                Blog Text:
+            </label>
+            <textarea type="text" name="blog_text" id="post-text"></textarea>
+        </div>
+    </div>
+    <div class="frm-btns">
+        <input class="btn btn-submit" type="submit">
+    </div>
+    
+</form>
+</div>
+<%- include("partials/footer.ejs") %>

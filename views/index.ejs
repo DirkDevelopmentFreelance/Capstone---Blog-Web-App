@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.blogs) { %>
+    <% if (blogs.length === 0) { %>
+        <h1>Create a blog by:</h1>
+        <h2>Moving mouse to left of screen > Click on "Create Blog" inside the sidebar</h2>
+    <% } else { %>
+        <% blogs.forEach(blog => { %>
+         <h1><%= blog.title %></h1>
+        <% }) %>
+        <h1>Select a blog inside the sidebar to view it.</h1>
+    <% } %>
+<% } else { %>
+    <h1>An error has occurred inside the server</h1>
+<% } %>
+
+<%- include("partials/footer.ejs") %>

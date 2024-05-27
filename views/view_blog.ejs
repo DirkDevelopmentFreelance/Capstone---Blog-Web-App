@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.currentBlog) { %>
+    <h1><%= currentBlog.title %></h1>
+    <p><%= currentBlog.text %></p>
+    <p><span>Blog Created On: </span><%= currentBlog.creation %></p>
+    
+<% } else {%>
+    <h1>Blog Could not be found</h1>
+<% } %>
+
+<%- include("partials/footer.ejs") %>
